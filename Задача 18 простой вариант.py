@@ -1,0 +1,11 @@
+import math
+a1=float(input('Угол А: '))
+b1=float(input('Угол В: '))
+c1=float(input('Угол С: '))
+r=float(input('Радиус описанной окружности: '))
+a=2*r*math.sin(a1)
+b=2*r*math.sin(b1)
+c=2*r*math.sin(c1)
+print('сторона А=:',a)
+print('сторона B=:',b)
+print('сторона C=:',c)
