@@ -1,36 +1,25 @@
 import turtle
+a = int(input('Длина стороны: '))
+b = int(input('Количество: '))
+def draw_sierpinski(length,depth): 
+    if depth==0: 
+     for i in range(0,3): 
+      t.fd(length) 
+      t.left(120) 
+    else: 
+     draw_sierpinski(length/2,depth-1) 
+     t.fd(length/2) 
+     draw_sierpinski(length/2,depth-1) 
+     t.bk(length/2) 
+     t.left(60) 
+     t.fd(length/2) 
+     t.right(60) 
+     draw_sierpinski(length/2,depth-1) 
+     t.left(60) 
+     t.bk(length/2) 
+     t.right(60) 
 
-def draw_triangle(some_turtle):
-    # This for loop will create - Outer Triangle
-    for i in range(3):
-        some_turtle.forward(50)
-        some_turtle.left(120)
-        # This for loop will create - Inner Triangle
-        #some_turtle.begin_fill()
-        for j in range(3):
-            some_turtle.forward(25)
-            some_turtle.left(120)
-        #some_turtle.end_fill()
-
-def draw_art():
-    # Create the turtle Brad - Draws a Triangle
-    brad = turtle.Turtle(shape="arrow")
-    brad.color("green")
-    #brad.speed("fasest")
-
-    # This for loop will create - Inner & Outer Triangle At 120 deg
-    for d in range(3):
-        brad.left(120)
-        # This for loop will create - Inner & Outer Triangle At distance 50
-        for c in range(4):
-            draw_triangle(brad)
-            brad.forward(50)
-
-    brad.hideturtle()
-
-window = turtle.Screen()
-window.bgcolor("white")
-
-draw_art()
-
-window.exitonclick()
+window = turtle.Screen() 
+t = turtle.Turtle() 
+draw_sierpinski(a,b) 
+window.exitonclick() 
