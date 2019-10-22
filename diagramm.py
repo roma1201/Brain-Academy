@@ -16,3 +16,15 @@ res={}
 for i in lang_set:
     res[i]=lang.count(i)
 print(res)
+
+
+lst=['cpp', 'python', 'python']
+n_list=set(lst)
+unique_list=dict()
+for lst_item in lst:
+    unique_list[lst_item]=lst.count(lst_item)
+print(unique_list)
+res=dict()
+for i in unique_list:
+    res[i]=360/len(lst)*unique_list[i]
+print(res)
